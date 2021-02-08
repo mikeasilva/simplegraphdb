@@ -1,0 +1,22 @@
+Package: simplegraphdb
+Title: This is a Simple Graph Database in SQLite, Inspired by Denis Papathanasiou's Python simple-graph Package
+Version: 0.0.1
+Authors@R: 
+    person(given = "Michael",
+           family = "Silva",
+           role = c("aut", "cre"),
+           email = "mike.a.silva@gmail.com",
+           comment = c(ORCID = "0000-0001-7344-660X"))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: 
+    DBI,
+    RSQLite,
+    jsonlite
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
