@@ -15,14 +15,14 @@ atomic <- function(db_file, sql_statement) {
   }
   # Connect to the database and send the query
   connection <- RSQLite::dbConnect(RSQLite::SQLite(), db_file)
-  RSQLite::dbSendStatement(connection, "PRAGMA foreign_keys = TRUE;")
-  RSQLite::dbSendStatement(connection, "BEGIN TRANSACTION;")
+  RSQLite::dbExecute(connection, "PRAGMA foreign_keys = TRUE;")
+  RSQLite::dbExecute(connection, "BEGIN TRANSACTION;")
   if (use_db_send_query) {
     res <- RSQLite::dbSendQuery(connection, sql_statement)
     results <- RSQLite::dbFetch(res)
     RSQLite::dbClearResult(res)
   } else {
-    RSQLite::dbSendStatement(connection, sql_statement)
+    RSQLite::dbExecute(connection, sql_statement)
     results <- NA
   }
   RSQLite::dbCommit(connection)
