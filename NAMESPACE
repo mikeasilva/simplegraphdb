@@ -2,6 +2,7 @@
 
 export(add_node)
 export(atomic)
+export(connect_nodes)
 export(find_inbound_neighbors)
 export(find_neighbors)
 export(find_node)
