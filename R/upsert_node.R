@@ -7,8 +7,10 @@
 #' @export
 upsert_node <- function(identifier, data, db_file) {
   # TODO: Add in JSON string to list handling
-  current_data <- rjson::fromJSON(simplegraphdb::atomic(db_file, simplegraphdb::find_node(identifier))$body)
+  identifier <- as.character(identifier)
+  current_data <- simplegraphdb::atomic(db_file, simplegraphdb::find_node(identifier))
+  current_data <- rjson::fromJSON(current_data$body)
   updated_data <- c(current_data, data)
   updated_data <- simplegraphdb::set_id(identifier, rjson::toJSON(updated_data))
-  paste0("UPDATE nodes SET body = json('", updated_data, "') WHERE id = ", identifier)
+  paste0("UPDATE nodes SET body = json('", updated_data, "') WHERE id = \"", identifier,"\"")
 }

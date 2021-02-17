@@ -3,5 +3,6 @@
 #' @param identifier The identifier for the node
 #' @export
 find_outbound_neighbors <- function(identifier){
-  paste0("SELECT * FROM edges WHERE source = ", identifier, ";")
+  identifier <- as.character(identifier)
+  paste0("SELECT * FROM edges WHERE source = \"", identifier, "\";")
 }
