@@ -1,4 +1,4 @@
-#' TODO add a description of the function
+#' Finds the path as you traverse the graph
 #'
 #' @param db_file The name of the SQLite database
 #' @param src The id of the source node
@@ -13,7 +13,7 @@ traverse <- function(db_file, src, tgt = NA, neighbors_fn = "find_neighbors") {
   queue <- c()
   # Check if the node exists
   data <- simplegraphdb::atomic(db_file, simplegraphdb::find_node(src))
-  if(nrow(data) > 0){
+  if (nrow(data) > 0) {
     data <- rjson::fromJSON(data$body)
     queue <- c(data$id)
   }
@@ -27,15 +27,15 @@ traverse <- function(db_file, src, tgt = NA, neighbors_fn = "find_neighbors") {
       path <- c(path, node)
     }
     # Find the neighbors and add them to the queue
-    if(neighbors_fn == "find_neighbors") {
+    if (neighbors_fn == "find_neighbors") {
       neighbors <- simplegraphdb::atomic(db_file, simplegraphdb::find_neighbors(node))
       neighbors <- c(neighbors$source, neighbors$target)
     }
-    if(neighbors_fn == "find_inbound_neighbors") {
+    if (neighbors_fn == "find_inbound_neighbors") {
       neighbors <- simplegraphdb::atomic(db_file, simplegraphdb::find_inbound_neighbors(node))
       neighbors <- unique(neighbors$source)
     }
-    if(neighbors_fn == "find_outbound_neighbors") {
+    if (neighbors_fn == "find_outbound_neighbors") {
       neighbors <- simplegraphdb::atomic(db_file, simplegraphdb::find_outbound_neighbors(node))
       neighbors <- unique(neighbors$target)
     }
@@ -44,8 +44,8 @@ traverse <- function(db_file, src, tgt = NA, neighbors_fn = "find_neighbors") {
     neighbors_to_add_to_queue <- neighbors_not_in_queue[neighbors_not_in_queue %notin% path]
     queue <- c(queue, neighbors_to_add_to_queue)
     # Check to see if we need to
-    if(!is.na(tgt)){
-      if(node == tgt) {
+    if (!is.na(tgt)) {
+      if (node == tgt) {
         break
       }
     }

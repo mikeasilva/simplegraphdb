@@ -9,7 +9,7 @@ atomic <- function(db_file, sql_statement) {
   use_db_send_query <- TRUE
   # Check the SQL statement to see if we need to change this assumption
   for (data_manipulation_keyword in c("INSERT", "DELETE", "UPDATE", "MERGE", "LOAD", "TRUNCATE", "DROP", "CREATE")) {
-    if(grepl(data_manipulation_keyword, toupper(sql_statement))){
+    if (grepl(data_manipulation_keyword, toupper(sql_statement))) {
       use_db_send_query <- FALSE
     }
   }

@@ -12,5 +12,5 @@ upsert_node <- function(identifier, data, db_file) {
   current_data <- rjson::fromJSON(current_data$body)
   updated_data <- c(current_data, data)
   updated_data <- simplegraphdb::set_id(identifier, rjson::toJSON(updated_data))
-  paste0("UPDATE nodes SET body = json('", updated_data, "') WHERE id = \"", identifier,"\"")
+  paste0("UPDATE nodes SET body = json('", updated_data, "') WHERE id = \"", identifier, "\"")
 }

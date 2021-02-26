@@ -2,6 +2,6 @@
 #'
 #' @param identifier The identifier for the node
 #' @export
-find_neighbors <- function(identifier){
+find_neighbors <- function(identifier) {
   paste0("SELECT * FROM edges WHERE source = \"", identifier, "\" OR target = \"", identifier, "\";")
 }

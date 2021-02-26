@@ -5,9 +5,9 @@
 #' @import rjson
 #' @export
 set_id <- function(identifier = NA, data) {
-  if(!is.na(identifier)){
+  if (!is.na(identifier)) {
     data <- rjson::fromJSON(data)
-    data$id = as.character(identifier)
+    data$id <- as.character(identifier)
     data <- rjson::toJSON(data)
   }
   return(data)
