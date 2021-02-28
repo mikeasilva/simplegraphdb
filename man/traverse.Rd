@@ -2,7 +2,7 @@
 % Please edit documentation in R/traverse.R
 \name{traverse}
 \alias{traverse}
-\title{TODO add a description of the function}
+\title{Finds the path as you traverse the graph}
 \usage{
 traverse(db_file, src, tgt = NA, neighbors_fn = "find_neighbors")
 }
@@ -16,5 +16,5 @@ traverse(db_file, src, tgt = NA, neighbors_fn = "find_neighbors")
 \item{neighbors_fn}{The neighbor function to employ.  Valid options are find_neighbors, find_inbound_neighbors or find_outbound_neighbors (optional)}
 }
 \description{
-TODO add a description of the function
+Finds the path as you traverse the graph
 }
