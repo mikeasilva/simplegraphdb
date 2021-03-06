@@ -1,3 +1,5 @@
-^simplegraphdb\.Rproj$
+^.*\.Rproj$
 ^\.Rproj\.user$
+^/\.gitattributes$
+^\.github$
 ^LICENSE\.md$
