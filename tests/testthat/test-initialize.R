@@ -1,4 +1,5 @@
 test_that("Initialize works", {
+  skip_on_cran()
   db <- "initialize_test.sqlite"
   initialize(db, "../schema.sql")
   test_md5 <- tools::md5sum(db)
