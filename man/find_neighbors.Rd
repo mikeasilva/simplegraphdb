@@ -9,6 +9,9 @@ find_neighbors(identifier)
 \arguments{
 \item{identifier}{The identifier for the node}
 }
+\value{
+A SQL statement to find the neighbors
+}
 \description{
 Generates the SQL to find the neighbors for a node in the database
 }

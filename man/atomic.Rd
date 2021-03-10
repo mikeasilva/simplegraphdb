@@ -11,6 +11,9 @@ atomic(db_file, sql_statement)
 
 \item{sql_statement}{The SQL statement to execute}
 }
+\value{
+Either the query results or NA for executed SQL statements
+}
 \description{
 An atomic transaction wrapper function
 }

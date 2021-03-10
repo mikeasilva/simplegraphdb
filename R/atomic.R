@@ -2,6 +2,7 @@
 #'
 #' @param db_file The name of the SQLite database
 #' @param sql_statement The SQL statement to execute
+#' @return Either the query results or NA for executed SQL statements
 #' @import RSQLite
 #' @export
 atomic <- function(db_file, sql_statement) {

@@ -2,6 +2,7 @@
 #'
 #' @param source_id The identifier for the source node
 #' @param target_id The identifier for the target node
+#' @return A SQL statement to find the edge connecting two nodes
 #' @export
 get_connections <- function(source_id, target_id) {
   source_id <- as.character(source_id)

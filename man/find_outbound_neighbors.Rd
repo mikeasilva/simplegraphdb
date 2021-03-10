@@ -9,6 +9,9 @@ find_outbound_neighbors(identifier)
 \arguments{
 \item{identifier}{The identifier for the node}
 }
+\value{
+A SQL statement to find outbound neighbors
+}
 \description{
 Generates the SQL to find the outbound neighbors for a node in the database
 }

@@ -9,6 +9,9 @@ find_node(identifier)
 \arguments{
 \item{identifier}{The identifier for the node}
 }
+\value{
+A SQL statement to find a node
+}
 \description{
 Generates the SQL to find a node from the database
 }

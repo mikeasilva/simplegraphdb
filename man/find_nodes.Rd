@@ -13,6 +13,9 @@ find_nodes(data, where_fn = "search_where", search_fn = "search_equals")
 
 \item{search_fn}{The function to use in the search.  Valid values are: search_equals (default), search_starts_with, or search_contains}
 }
+\value{
+A SQL statement to find nodes matching a criteria
+}
 \description{
 Generate SQL to find nodes matching a criteria
 }

@@ -3,6 +3,7 @@
 #' @param data A list of data that are the search criteria
 #' @param where_fn The function to use in the SQL WHERE clause.  Valid values are: search_where (default) or search_like
 #' @param search_fn The function to use in the search.  Valid values are: search_equals (default), search_starts_with, or search_contains
+#' @return A SQL statement to find nodes matching a criteria
 #' @export
 find_nodes <- function(data, where_fn = "search_where", search_fn = "search_equals") {
 

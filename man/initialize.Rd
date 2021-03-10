@@ -11,6 +11,15 @@ initialize(db_file, schema_file = "./tests/schema.sql")
 
 \item{schema_file}{The SQL schema file (optional)}
 }
+\value{
+No return value.  It creates the database.
+}
 \description{
 Initialize a new graph database
+}
+\examples{
+\dontrun{
+library(simplegraphdb)
+initialize("network.sqlite")
+}
 }

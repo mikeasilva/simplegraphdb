@@ -2,6 +2,7 @@
 #'
 #' @param identifier The id
 #' @param data The JSON data
+#' @return JSON ecoded data
 #' @import rjson
 #' @export
 set_id <- function(identifier = NA, data) {

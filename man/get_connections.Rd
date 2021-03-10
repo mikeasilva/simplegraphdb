@@ -11,6 +11,9 @@ get_connections(source_id, target_id)
 
 \item{target_id}{The identifier for the target node}
 }
+\value{
+A SQL statement to find the edge connecting two nodes
+}
 \description{
 Generates the SQL to find the connections for a node in the database
 }

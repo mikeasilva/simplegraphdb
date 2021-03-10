@@ -11,6 +11,9 @@ set_id(identifier = NA, data)
 
 \item{data}{The JSON data}
 }
+\value{
+JSON ecoded data
+}
 \description{
 Sets the id attribute in JSON data
 }
