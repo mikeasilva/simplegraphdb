@@ -1,13 +1,13 @@
 Package: simplegraphdb
 Title: A Simple Graph Database
-Version: 2021.03.06
+Version: 2021.03.10
 Authors@R: 
     person(given = "Michael",
            family = "Silva",
            role = c("aut", "cre"),
            email = "mike.a.silva@gmail.com",
            comment = c(ORCID = "0000-0001-7344-660X"))
-Description: This is a graph database in SQLite.  It is inspired by Denis Papathanasiou's Python simple-graph project on GitHub.
+Description: This is a graph database in 'SQLite'.  It is inspired by Denis Papathanasiou's Python simple-graph project on 'GitHub'.
 License: MIT + file LICENSE
 URL: https://github.com/mikeasilva/simplegraphdb
 BugReports: https://github.com/mikeasilva/simplegraphdb/issues
