@@ -1,6 +1,6 @@
 # About
 
-This is a simple graph database in [SQLite](https://www.sqlite.org/), inspired by "[Denis Papathanasiou's simple-graph project](https://github.com/dpapathanasiou/simple-graph)", however this is written in R.  This package is fully compatible with the python equivalant and interoperable.  There are minor differences in the API, but it is largely identical.
+This is a simple graph database in [SQLite](https://www.sqlite.org/index.html), inspired by "[Denis Papathanasiou's simple-graph project](https://github.com/dpapathanasiou/simple-graph)", however this is written in R.  This package is fully compatible with the python equivalant and interoperable.  There are minor differences in the API, but it is largely identical.
 
 # Structure
 
