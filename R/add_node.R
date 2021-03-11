@@ -9,12 +9,23 @@
 #' apple <- "apple_test.sqlite"
 #' initialize(apple)
 #'
-#' # Add in some nodes with data
-#' atomic(apple, add_node(list("name" = "Apple Computer Company", "type" = c("company", "start-up"), "founded" = "April 1, 1976"), 1))
-#' atomic(apple, add_node(list("name" = "Steve Wozniak", "type" = c("person", "engineer", "founder")), 2))
-#' atomic(apple, add_node(list("name" = "Steve Jobs", "type" = c("person", "designer", "founder")), 3))
-#' atomic(apple, add_node(list("name" = "Ronald Wayne", "type" = c("person", "administrator", "founder")), 4))
-#' atomic(apple, add_node(list("name" = "Mike Markkula", "type" = c("person", "investor")), 5))
+#' # Add nodes with data
+#' atomic(apple, add_node(list(
+#'   "name" = "Apple Computer Company",
+#'   "type" = c("company", "start-up"),
+#'   "founded" = "April 1, 1976"), 1))
+#' atomic(apple, add_node(list(
+#'   "name" = "Steve Wozniak",
+#'   "type" = c("person", "engineer", "founder")), 2))
+#' atomic(apple, add_node(list(
+#'   "name" = "Steve Jobs",
+#'   "type" = c("person", "designer", "founder")), 3))
+#' atomic(apple, add_node(list(
+#'   "name" = "Ronald Wayne",
+#'   "type" = c("person", "administrator", "founder")), 4))
+#' atomic(apple, add_node(list(
+#'   "name" = "Mike Markkula",
+#'   "type" = c("person", "investor")), 5))
 #'}
 #' @import rjson
 #' @export
